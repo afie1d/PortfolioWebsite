@@ -1,11 +1,9 @@
-import headshotUrl from '../assets/headshot.JPG';
-
 export function renderAbout(): void {
   const section = document.getElementById('about');
   if (!section) return;
 
   const photoHTML = `
-    <img src="${headshotUrl}" alt="Adam Field" class="about__photo" />
+    <img src="/assets/headshot.JPG" alt="Adam Field" class="about__photo" />
   `;
 
   section.innerHTML = `
