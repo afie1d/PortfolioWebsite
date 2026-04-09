@@ -1,0 +1,80 @@
+.skills-category + .skills-category {
+  margin-top: 2rem;
+}
+
+.skills-category__title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+}
+
+/* ─── Skill row ──────────────────────────────────────────── */
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-fast);
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-row:hover .skill-bar--filled {
+  box-shadow: 0 0 6px var(--color-accent);
+}
+
+.skill-row__name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  min-width: 180px;
+}
+
+/* ─── Bars ───────────────────────────────────────────────── */
+.skill-bars {
+  display: flex;
+  gap: 4px;
+}
+
+.skill-bar {
+  width: 40px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--color-skill-empty);
+}
+
+.skill-bar--filled {
+  background: var(--color-skill-filled);
+  transform-origin: left center;
+  transition: box-shadow var(--transition-base);
+}
+
+/* Bar fill animation — triggered when section is visible */
+@keyframes bar-fill {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
+.skills-animated .skill-bar--filled {
+  animation: bar-fill 400ms ease both;
+  animation-delay: calc(var(--bar-index, 0) * 60ms + var(--category-delay, 0ms));
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .skill-row__name {
+    min-width: 140px;
+    font-size: 0.8125rem;
+  }
+
+  .skill-bar {
+    width: 28px;
+  }
+}

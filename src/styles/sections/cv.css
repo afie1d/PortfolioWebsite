@@ -1,0 +1,138 @@
+.cv-timeline {
+  position: relative;
+  padding: 0 0 2rem;
+}
+
+/* ─── Center line ────────────────────────────────────────── */
+.cv-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--color-border) 5%, var(--color-border) 95%, transparent);
+}
+
+/* ─── Entry ──────────────────────────────────────────────── */
+.cv-entry {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Dot on the timeline */
+.cv-entry::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid var(--color-bg-page);
+  z-index: 1;
+}
+
+.cv-entry--left {
+  justify-content: flex-start;
+  padding-right: calc(50% + 2rem);
+}
+
+.cv-entry--right {
+  justify-content: flex-end;
+  padding-left: calc(50% + 2rem);
+}
+
+/* ─── Card ───────────────────────────────────────────────── */
+.cv-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.125rem;
+  width: 100%;
+  transition: border-color var(--transition-base);
+}
+
+.cv-card:hover {
+  border-color: var(--color-border-hover);
+}
+
+.cv-card__date {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  margin-bottom: 0.4rem;
+}
+
+.cv-card__role {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.cv-card__company {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.cv-card__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ─── Slide-in animations ────────────────────────────────── */
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.cv-entry--left .cv-card {
+  opacity: 0;
+}
+.cv-entry--right .cv-card {
+  opacity: 0;
+}
+
+.cv-entry--left.is-visible .cv-card {
+  animation: slide-in-left 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.cv-entry--right.is-visible .cv-card {
+  animation: slide-in-right 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .cv-timeline::before {
+    left: 10px;
+  }
+
+  .cv-entry::before {
+    left: 10px;
+  }
+
+  .cv-entry--left,
+  .cv-entry--right {
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+
+  .cv-entry--left.is-visible .cv-card {
+    animation: slide-in-right 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}

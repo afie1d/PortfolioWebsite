@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adam Field — Machine learning engineer building at the intersection of computer vision and health technology." />
+    <title>Adam Field</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+  </head>
+  <body>
+
+    <!-- ─── Navigation ─────────────────────────────────────────────────── -->
+    <header>
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav__inner">
+          <a class="nav__logo" href="#home" data-scroll-to="home" aria-label="Adam Field — back to top">
+            Adam Field
+          </a>
+          <ul class="nav__links" role="list">
+            <li><a class="nav__link" href="#home"     data-section="home"     data-scroll-to="home">Home</a></li>
+            <li><a class="nav__link" href="#about"    data-section="about"    data-scroll-to="about">About</a></li>
+            <li><a class="nav__link" href="#projects" data-section="projects" data-scroll-to="projects">Projects</a></li>
+            <li><a class="nav__link" href="#skills"   data-section="skills"   data-scroll-to="skills">Skills</a></li>
+            <li><a class="nav__link" href="#cv"       data-section="cv"       data-scroll-to="cv">CV</a></li>
+          </ul>
+          <button
+            class="nav__hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+          >
+            <span class="nav__hamburger-bar"></span>
+            <span class="nav__hamburger-bar"></span>
+            <span class="nav__hamburger-bar"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile overlay nav -->
+      <nav id="nav-overlay" class="nav__overlay" aria-label="Mobile navigation">
+        <a class="nav__link" href="#home"     data-section="home"     data-scroll-to="home">Home</a>
+        <a class="nav__link" href="#about"    data-section="about"    data-scroll-to="about">About</a>
+        <a class="nav__link" href="#projects" data-section="projects" data-scroll-to="projects">Projects</a>
+        <a class="nav__link" href="#skills"   data-section="skills"   data-scroll-to="skills">Skills</a>
+        <a class="nav__link" href="#cv"       data-section="cv"       data-scroll-to="cv">CV</a>
+      </nav>
+    </header>
+
+    <!-- ─── Main content ───────────────────────────────────────────────── -->
+    <main>
+      <section id="home"     class="home"                             aria-label="Home"></section>
+      <section id="about"    class="section section-animate"         aria-label="About"></section>
+      <section id="projects" class="section section-animate"         aria-label="Projects"></section>
+      <section id="skills"   class="section section-animate"         aria-label="Skills"></section>
+      <section id="cv"       class="section section-animate"         aria-label="Career timeline"></section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

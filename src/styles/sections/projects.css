@@ -1,0 +1,91 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* ─── Tile ───────────────────────────────────────────────── */
+.project-tile {
+  position: relative;
+  display: block;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.125rem;
+  cursor: pointer;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border-hover);
+  box-shadow: 0 8px 32px rgb(108 99 255 / 0.1);
+}
+
+/* ─── GitHub icon (top-right) ────────────────────────────── */
+.project-tile__github {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition-base);
+}
+
+.project-tile:hover .project-tile__github {
+  color: var(--color-accent-hover);
+}
+
+/* ─── Content ────────────────────────────────────────────── */
+.project-tile__name {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  padding-right: 2rem; /* avoid overlap with github icon */
+}
+
+.project-tile__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* ─── Skill pills ────────────────────────────────────────── */
+.project-tile__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-pill {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent-hover);
+  background: var(--color-accent-dim);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(printf 'y\\\\n')",
+      "Bash(npx create-vite@latest . --template vanilla-ts)",
+      "Bash(cp -r /tmp/vite-scaffold/* \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "Bash(cp -r /tmp/vite-scaffold/public \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "Bash(mv \"C:/Users/adamfield/Desktop/Lab/../CLAUDE.md.bak\" \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/CLAUDE.md\")",
+      "Bash(mv \"C:/Users/adamfield/Desktop/Lab/index.html\" \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "Bash(mv \"C:/Users/adamfield/Desktop/Lab/package.json\" \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "Bash(mv \"C:/Users/adamfield/Desktop/Lab/tsconfig.json\" \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "Bash(cp -r \"C:/Users/adamfield/Desktop/Lab/src\" \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "Bash(cp -rn \"C:/Users/adamfield/Desktop/Lab/public\" \"C:/Users/adamfield/Desktop/Lab/PortfolioWebsite/\")",
+      "WebFetch(domain:fonts.bunny.net)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_take_screenshot",
+      "Bash(npx vite:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5174)",
+      "Bash(netstat -ano)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://localhost:5175/)",
+      "mcp__playwright__browser_run_code",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4173/)",
+      "mcp__playwright__browser_tabs"
+    ]
+  }
+}

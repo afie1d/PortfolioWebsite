@@ -1,0 +1,173 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation "Main navigation" [ref=e2]:
+      - generic [ref=e3]:
+        - link "Adam Field — back to top" [ref=e4] [cursor=pointer]:
+          - /url: "#home"
+          - text: Adam Field
+        - list [ref=e5]:
+          - listitem [ref=e6]:
+            - link "Home" [ref=e7] [cursor=pointer]:
+              - /url: "#home"
+          - listitem [ref=e8]:
+            - link "About" [ref=e9] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e10]:
+            - link "Projects" [ref=e11] [cursor=pointer]:
+              - /url: "#projects"
+          - listitem [ref=e12]:
+            - link "Skills" [ref=e13] [cursor=pointer]:
+              - /url: "#skills"
+          - listitem [ref=e14]:
+            - link "CV" [ref=e15] [cursor=pointer]:
+              - /url: "#cv"
+  - main [ref=e16]:
+    - region "Home" [ref=e17]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Hello, I'm
+        - heading "Adam Field" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Machine learning engineer building at the intersection of computer vision and health technology.
+        - navigation "Social links" [ref=e22]:
+          - link "Adam Field on LinkedIn" [ref=e23] [cursor=pointer]:
+            - /url: https://linkedin.com/in/adamfield
+            - img [ref=e24]
+            - generic [ref=e27]: LinkedIn
+          - link "Adam Field on GitHub" [ref=e28] [cursor=pointer]:
+            - /url: https://github.com/ajfield
+            - img [ref=e29]
+            - generic [ref=e31]: GitHub
+          - link "Email Adam Field" [ref=e32] [cursor=pointer]:
+            - /url: mailto:adam@example.com
+            - img [ref=e33]
+            - generic [ref=e36]: Email
+      - img [ref=e38]
+    - region "About" [ref=e40]:
+      - heading "About" [level=2] [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - paragraph [ref=e44]: I'm a machine learning engineer focused on computer vision, biosignal modeling, and health technology. I currently work at an early-stage medical AI startup where I own model development end to end — from data pipelines to deployment.
+          - paragraph [ref=e45]: I'm drawn to problems where coherent systems thinking and deep technical craft intersect, and I'm building toward founding a company in the health-tech space.
+        - generic "Profile photo placeholder" [ref=e47]: AF
+    - region "Projects" [ref=e48]:
+      - heading "Projects" [level=2] [ref=e49]
+      - generic [ref=e50]:
+        - link "Conditional Image-to-Image GAN — view on GitHub" [ref=e51] [cursor=pointer]:
+          - /url: https://github.com/ajfield/med-image-gan
+          - img [ref=e53]
+          - heading "Conditional Image-to-Image GAN" [level=3] [ref=e55]
+          - paragraph [ref=e56]: Medical image style transfer using a conditional GAN with a composite loss stack combining LPIPS, MS-SSIM, and VGG feature matching.
+          - list "Technologies" [ref=e57]:
+            - listitem [ref=e58]: PyTorch
+            - listitem [ref=e59]: Computer Vision
+            - listitem [ref=e60]: GANs
+        - link "Biosignal Activity Classifier — view on GitHub" [ref=e61] [cursor=pointer]:
+          - /url: https://github.com/ajfield/biosignal-har
+          - img [ref=e63]
+          - heading "Biosignal Activity Classifier" [level=3] [ref=e65]
+          - paragraph [ref=e66]: Human activity recognition from wearable accelerometer and gyroscope data using a lightweight 1D CNN with channel attention.
+          - list "Technologies" [ref=e67]:
+            - listitem [ref=e68]: PyTorch
+            - listitem [ref=e69]: Signal Processing
+            - listitem [ref=e70]: Python
+        - link "Portfolio Website — view on GitHub" [ref=e71] [cursor=pointer]:
+          - /url: https://github.com/ajfield/portfolio
+          - img [ref=e73]
+          - heading "Portfolio Website" [level=3] [ref=e75]
+          - paragraph [ref=e76]: This site — a performant single-page portfolio built with vanilla TypeScript and Vite, deployed on Cloudflare Pages.
+          - list "Technologies" [ref=e77]:
+            - listitem [ref=e78]: TypeScript
+            - listitem [ref=e79]: Vite
+            - listitem [ref=e80]: CSS
+            - listitem [ref=e81]: Cloudflare
+        - link "Reaction-Diffusion Simulator — view on GitHub" [ref=e82] [cursor=pointer]:
+          - /url: https://github.com/ajfield/reaction-diffusion
+          - img [ref=e84]
+          - heading "Reaction-Diffusion Simulator" [level=3] [ref=e86]
+          - paragraph [ref=e87]: Real-time WebGL simulation of Gray-Scott reaction-diffusion equations, producing emergent Turing patterns at interactive framerates.
+          - list "Technologies" [ref=e88]:
+            - listitem [ref=e89]: WebGL
+            - listitem [ref=e90]: GLSL
+            - listitem [ref=e91]: JavaScript
+        - link "CLIP Image Search — view on GitHub" [ref=e92] [cursor=pointer]:
+          - /url: https://github.com/ajfield/clip-search
+          - img [ref=e94]
+          - heading "CLIP Image Search" [level=3] [ref=e96]
+          - paragraph [ref=e97]: Zero-shot semantic image search over a local photo library using OpenAI CLIP embeddings and cosine similarity retrieval.
+          - list "Technologies" [ref=e98]:
+            - listitem [ref=e99]: Python
+            - listitem [ref=e100]: CLIP
+            - listitem [ref=e101]: FastAPI
+    - region "Skills" [ref=e102]:
+      - heading "Skills" [level=2] [ref=e103]
+      - generic [ref=e104]:
+        - heading "Machine Learning / AI" [level=3] [ref=e105]
+        - generic [ref=e106]:
+          - generic [ref=e107]: PyTorch
+          - generic "5 out of 5" [ref=e108]
+        - generic [ref=e114]:
+          - generic [ref=e115]: Computer Vision
+          - generic "5 out of 5" [ref=e116]
+        - generic [ref=e122]:
+          - generic [ref=e123]: GANs
+          - generic "4 out of 5" [ref=e124]
+        - generic [ref=e130]:
+          - generic [ref=e131]: Signal Processing
+          - generic "4 out of 5" [ref=e132]
+        - generic [ref=e138]:
+          - generic [ref=e139]: CLIP / Vision-Language Models
+          - generic "4 out of 5" [ref=e140]
+        - generic [ref=e146]:
+          - generic [ref=e147]: Scikit-learn
+          - generic "3 out of 5" [ref=e148]
+      - generic [ref=e154]:
+        - heading "Software Development" [level=3] [ref=e155]
+        - generic [ref=e156]:
+          - generic [ref=e157]: Python
+          - generic "5 out of 5" [ref=e158]
+        - generic [ref=e164]:
+          - generic [ref=e165]: TypeScript
+          - generic "4 out of 5" [ref=e166]
+        - generic [ref=e172]:
+          - generic [ref=e173]: Git
+          - generic "4 out of 5" [ref=e174]
+        - generic [ref=e180]:
+          - generic [ref=e181]: Linux / Bash
+          - generic "4 out of 5" [ref=e182]
+        - generic [ref=e188]:
+          - generic [ref=e189]: Docker
+          - generic "3 out of 5" [ref=e190]
+        - generic [ref=e196]:
+          - generic [ref=e197]: FastAPI
+          - generic "3 out of 5" [ref=e198]
+        - generic [ref=e204]:
+          - generic [ref=e205]: SQL
+          - generic "3 out of 5" [ref=e206]
+      - generic [ref=e212]:
+        - heading "Product Management" [level=3] [ref=e213]
+        - generic [ref=e214]:
+          - generic [ref=e215]: Technical Roadmapping
+          - generic "3 out of 5" [ref=e216]
+        - generic [ref=e222]:
+          - generic [ref=e223]: Cross-functional Communication
+          - generic "3 out of 5" [ref=e224]
+        - generic [ref=e230]:
+          - generic [ref=e231]: User Research
+          - generic "2 out of 5" [ref=e232]
+    - region "Career timeline" [ref=e238]:
+      - heading "Career" [level=2] [ref=e239]
+      - generic [ref=e240]:
+        - generic [ref=e242]:
+          - paragraph [ref=e243]: 2024 — Present
+          - heading "Machine Learning Engineer" [level=3] [ref=e244]
+          - paragraph [ref=e245]: "[Startup Name]"
+          - paragraph [ref=e246]: Building computer vision models for medical imaging end to end, from dataset curation and labelling pipelines to production deployment on edge devices.
+        - generic [ref=e248]:
+          - paragraph [ref=e249]: Summer 2023
+          - heading "Machine Learning Intern" [level=3] [ref=e250]
+          - paragraph [ref=e251]: "[Company Name]"
+          - paragraph [ref=e252]: Developed object detection and segmentation pipelines for industrial inspection, reducing manual QA time by improving defect recall on a benchmark dataset.
+        - generic [ref=e254]:
+          - paragraph [ref=e255]: 2020 — 2024
+          - heading "BS Computer Science & Entrepreneurship" [level=3] [ref=e256]
+          - paragraph [ref=e257]: "[University]"
+          - paragraph [ref=e258]: "Graduated with a concentration in machine learning and technology ventures. Capstone project: real-time biosignal classification system for wearable health devices."
