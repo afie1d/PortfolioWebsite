@@ -38,6 +38,18 @@ const socialLinks: SocialLink[] = [
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
     </svg>`,
   },
+  {
+    label: 'Resume',
+    href: '/Adam_Field_Resume.pdf',
+    ariaLabel: 'Download Adam Field\'s resume',
+    trackLabel: 'resume',
+    icon: `<svg class="home__social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="12" y1="18" x2="12" y2="12"/>
+      <polyline points="9 15 12 18 15 15"/>
+    </svg>`,
+  },
 ];
 
 export function renderHome(): void {
@@ -45,17 +57,17 @@ export function renderHome(): void {
   if (!section) return;
 
   const socialHTML = socialLinks
-    .map(
-      (link) =>
-        `<a
+    .map((link) => {
+      const isDownload = link.trackLabel === 'resume';
+      const downloadAttr = isDownload ? ' download' : '';
+      const targetAttr = isDownload ? '' : ' target="_blank" rel="noopener noreferrer"';
+      return `<a
           class="home__social-link"
-          href="${link.href}"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="${link.href}"${targetAttr}${downloadAttr}
           aria-label="${link.ariaLabel}"
           data-track="${link.trackLabel}"
-        >${link.icon}<span>${link.label}</span></a>`,
-    )
+        >${link.icon}<span>${link.label}</span></a>`;
+    })
     .join('');
 
   section.innerHTML = `

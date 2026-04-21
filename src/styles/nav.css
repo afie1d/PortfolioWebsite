@@ -79,6 +79,26 @@
   background: var(--color-accent-hover);
 }
 
+/* ─── Resume download button ────────────────────────────── */
+.nav__resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent-dim);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  transition: color var(--transition-base), border-color var(--transition-base), background var(--transition-base);
+}
+
+.nav__resume-btn:hover {
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  background: var(--color-accent-dim);
+}
+
 /* ─── Hamburger ──────────────────────────────────────────── */
 .nav__hamburger {
   display: none;
@@ -129,6 +149,11 @@
 
 .nav__overlay .nav__link {
   font-size: var(--font-size-xl);
+}
+
+.nav__overlay .nav__resume-btn {
+  font-size: var(--font-size-lg);
+  padding: 0.5rem 1.25rem;
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */
