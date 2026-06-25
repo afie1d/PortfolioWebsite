@@ -30,7 +30,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     label: 'Email',
-    href: 'mailto:adamjfield@outlook.com',
+    href: 'mailto:adam@adamfield.dev',
     ariaLabel: 'Email Adam Field',
     trackLabel: 'email',
     icon: `<svg class="home__social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
